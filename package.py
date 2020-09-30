@@ -19,6 +19,7 @@ requires = [
     "pymongo",
     "montydb",
     "allzpark",
+    "graphviz",
 ]
 
 build_command = "python {root}/rezbuild.py {install}"
