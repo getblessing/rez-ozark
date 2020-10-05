@@ -28,7 +28,7 @@ def build(source_path, build_path, install_path, targets=None):
     print("Installing additional dependencies into Rez core")
     install_rez_dependency(additional_rez_core_dependencies)
 
-    for dirname in [".resources", "bin", "config", "python", "rezplugins"]:
+    for dirname in ["template", "bin", "config", "python", "rezplugins"]:
         dir_src = os.path.join(source_path, dirname)
         dir_dst = os.path.join(dst, dirname)
         shutil.copytree(dir_src, dir_dst)

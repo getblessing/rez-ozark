@@ -8,7 +8,7 @@ from rez.config import config as config_
 
 def init():
     ozark_root = os.environ["REZ_OZARK_ROOT"]
-    template = os.path.join(ozark_root, ".resources", "package_template.py")
+    template = os.path.join(ozark_root, "template", "profile.py")
     package_py = os.path.join(os.getcwd(), "package.py")
     if os.path.exists(package_py):
         print("package.py already exists in current directory.")
