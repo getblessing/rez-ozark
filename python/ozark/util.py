@@ -30,13 +30,6 @@ def init():
     icon_path = identicon.generate(profile_name)
     shutil.move(icon_path, os.path.join(res_dir, "icon.png"))
 
-    # Open profile package with default editor for authoring
-    subprocess.call([
-        "idle",
-        "-e",
-        package_py,
-    ])
-
 
 def ls(location=None):
     if location:
