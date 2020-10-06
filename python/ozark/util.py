@@ -24,7 +24,8 @@ def init():
         pkg_file.write(lines)
 
     res_dir = os.path.join(os.getcwd(), "resources")
-    os.makedirs(res_dir)
+    if not os.path.isdir(res_dir):
+        os.makedirs(res_dir)
 
     # generate identicon for profile
     icon_path = identicon.generate(profile_name)
