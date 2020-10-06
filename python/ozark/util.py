@@ -60,15 +60,16 @@ def ls(location=None):
 
 def build(location=None):
     if location:
-        location = get_location(location)
-        if location is None:
-            raise Exception("Location '%s' not registered in mongozark.")
+        _location = get_location(location)
+        if _location is None:
+            raise Exception("Location '%s' not registered in mongozark."
+                            % location)
 
         args = [
             "rez-build",
             "--install",
             "--prefix",
-            location,
+            _location,
         ]
 
     else:
