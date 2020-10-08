@@ -22,13 +22,14 @@ def profiles():
     # User name based filtering
     # (TODO) But could be department name or anything else,
     #   and implementing roles as packages.
-    user_roles = {getpass.getuser()}
+    user_roles = {getpass.getuser().lower()}
 
     accessible_profiles = list()
     for pkg_family in iter_package_families(paths=__mongozark.profiles):
 
         latest_version = next(pkg_family.iter_packages())
-        required_roles = set(getattr(latest_version, "roles", []))
+        required_roles = set(r.lower() for r in
+                             getattr(latest_version, "roles", []))
 
         if required_roles.intersection(user_roles):
             accessible_profiles.append(pkg_family.name)
