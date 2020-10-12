@@ -1293,6 +1293,10 @@ QHeaderView::section::horizontal::first, QHeaderView::section::horizontal::only-
     border-left: 1px solid #444343;
 }
 
+QHeaderView::section::horizontal::last
+{
+    border-right: 1px solid #444343;
+}
 
 QHeaderView::section::horizontal
 {
