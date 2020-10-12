@@ -1,7 +1,7 @@
 
 name = "ozark"
 
-version = "0.2.3"
+version = "0.2.4"
 
 description = "Able to read from MongoDB"
 
