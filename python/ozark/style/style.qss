@@ -1066,13 +1066,13 @@ QTreeView::branch:open:has-children:has-siblings  {
 QTreeView::branch:has-children:!has-siblings:closed:hover,
 QTreeView::branch:closed:has-children:has-siblings:hover {
     image: url(:/qss_icons/rc/branch_closed-on.png);
-    }
+}
 
 
 QTreeView::branch:open:has-children:!has-siblings:hover,
 QTreeView::branch:open:has-children:has-siblings:hover  {
     image: url(:/qss_icons/rc/branch_open-on.png);
-    }
+}
 
 
 QListView::item:!selected:hover, QTreeView::item:!selected:hover  {
@@ -1514,6 +1514,9 @@ FullCommand QLineEdit {
 }
 
 
+Profiles QTreeView:branch:selected {
+	background-color: #40576D;
+}
 
 /* Failed to styling QCompleter...
 
