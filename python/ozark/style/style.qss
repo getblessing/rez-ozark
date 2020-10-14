@@ -1518,6 +1518,10 @@ Profiles QTreeView:branch:selected {
 	background-color: #40576D;
 }
 
+Profiles QPushButton:hover {
+    background-color: transparent;
+}
+
 /* Failed to styling QCompleter...
 
 QAbstractItemView #completerPopup {
